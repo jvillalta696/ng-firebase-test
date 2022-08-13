@@ -1,7 +1,9 @@
 <form [formGroup]="loginForm">
+    <h6 *ngIf="error">{{error}}</h6>
     <label for="email">Email: </label>
     <input type="email" formControlName="email" id="email"> 
     <label for="psw">Password: </label>
     <input type="password" formControlName="psw" id="psw">    
-    <button type="submit"(click)="[submit()]">Go Dashboard</button>
+    <button type="submit"(click)="[signup()]">Sign Up</button>
+    <button type="submit"(click)="[signin()]">Sign In</button>
 </form>
