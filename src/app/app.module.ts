@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FormLoginComponent } from './Componets/form-login/form-login.component';
 import { LoginViewComponent } from './Views/login-view/login-view.component';
 import { DashboardViewComponent } from './Views/dashboard-view/dashboard-view.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DashboardViewComponent } from './Views/dashboard-view/dashboard-view.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

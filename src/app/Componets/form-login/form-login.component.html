@@ -1,1 +1,7 @@
-<p>form-login works!</p>
+<form [formGroup]="loginForm">
+    <label for="email">Email: </label>
+    <input type="email" formControlName="email" id="email"> 
+    <label for="psw">Password: </label>
+    <input type="password" formControlName="psw" id="psw">    
+    <button type="submit"(click)="[submit()]">Go Dashboard</button>
+</form>
