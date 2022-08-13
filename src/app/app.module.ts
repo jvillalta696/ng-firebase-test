@@ -7,6 +7,9 @@ import { FormLoginComponent } from './Componets/form-login/form-login.component'
 import { LoginViewComponent } from './Views/login-view/login-view.component';
 import { DashboardViewComponent } from './Views/dashboard-view/dashboard-view.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth())
   ],
   providers: [],
   bootstrap: [AppComponent]
